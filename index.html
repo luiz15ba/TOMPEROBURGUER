@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tômpero Burguer</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cart">
+            <img src="https://www.freeiconspng.com/thumbs/grocery-cart-icon/grocery-cart-icon-9.png" alt="cart">
+            <div class="qtd">
+                <p class=>5</p>
+            </div>
+
+        </div>
+        <div class="cart-area hidden">
+            <div class="cart-on">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/696/736/non_2x/red-close-icon-free-png.png"
+                    alt="cart">
+            </div>
+            <div>
+                <p class="total">total = </p>
+            </div>
+            <div class="render-cart">
+                <div class="cart-item">
+                    <img src="" alt="foto">
+                    <p>Nome</p>
+                    <select name="qtd" id="">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+
+            </div>
+            <button class="enviar pedido">CONFIRMAR PEDIDO</button>
+        </div>
+        <div class="logo-area">
+            <div class="banner">
+                <img src="./assets/imgs/carrosel.jpg" alt="">
+            </div>
+            <div class="img-foto">
+                <img src="./assets/imgs/logo.png" alt="logo">
+            </div>
+        </div>
+        <div class="cardapio-area">
+            <div class="area-geral">
+                <div class="item">
+                    <img class="item-foto"
+                        src="https://ogimg.infoglobo.com.br/in/23479725-1b1-ff2/FT1086A/760/20180511DonninhaFotoVitor-Faria-media-1.jpg"
+                        alt="produto">
+                    <p class="produto-titulo">X-TUDO</p>
+                    <button class="add">ADICIONAR</button>
+                </div>
+
+                <div class="item">
+                    <img class="item-foto"
+                        src="https://ogimg.infoglobo.com.br/in/23479725-1b1-ff2/FT1086A/760/20180511DonninhaFotoVitor-Faria-media-1.jpg"
+                        alt="produto">
+                    <p class="produto-titulo">X-TUDO</p>
+                    <button>ADICIONAR</button>
+                </div>
+
+                <div class="item">
+                    <img class="item-foto"
+                        src="https://ogimg.infoglobo.com.br/in/23479725-1b1-ff2/FT1086A/760/20180511DonninhaFotoVitor-Faria-media-1.jpg"
+                        alt="produto">
+                    <p class="produto-titulo">X-TUDO</p>
+                    <button>ADICIONAR</button>
+                </div>
+
+                <div class="item">
+                    <img class="item-foto"
+                        src="https://ogimg.infoglobo.com.br/in/23479725-1b1-ff2/FT1086A/760/20180511DonninhaFotoVitor-Faria-media-1.jpg"
+                        alt="produto">
+                    <p class="produto-titulo">X-TUDO</p>
+                    <button>ADICIONAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="area-dados hidden">
+            <div class="apagar remv">Fechar</div>
+            <div class="header">
+                <p class="pagtxt">Dados de entrega * Em caso de retirada deixe o endereço vazio</p>
+                <select class="escol" name="opcao">
+                    <option class="color" selected value="Entrega">Entrega</option>
+                    <option class="color" value="Retirada">Retirada</option>
+                </select>
+            </div>
+            <div class="dados-pessoa">
+                <input class="cliente" type="text" placeholder="Seu Nome">
+                <input class="rua" type="text" placeholder="Rua">
+                <input class="bairro" type="text" placeholder="Bairro">
+                <input class="numero" type="number" placeholder="Numero">
+                <input class="referencia" type="text" placeholder="Referencia">
+            </div>
+            <div class="dados-pessoa obs">
+                <p>Observações do Pedido</p>
+                <input class="obes" type="text" value="Sem Observações">
+            </div>
+            <div class="dados-pessoa pag">
+                <p class="pagtxt">Forma de Pagamento</p>
+                <select name="choise">
+                    <option value="pix">PIX</option>
+                    <option value="cartao-credito">CARTÃO CRÉDITO</option>
+                    <option value="cartao-debito">CARTÃO DEBITO</option>
+                </select>
+            </div>
+            <button class="enviar pedido">FINALIZAR PEDIDO</button>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

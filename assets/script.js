@@ -57,6 +57,44 @@ let cardapio = [
     }
 ]
 
+let acompanhamentos = [
+    {
+        id: 8,
+        nome: 'CARNE',
+        vaslor: 8.00
+    },
+    {
+        id: 9,
+        nome: 'MUSSARELA',
+        vaslor: 3.00
+    },
+    {
+        id: 10,
+        nome: 'BACON',
+        vaslor: 3.00
+    },
+    {
+        id: 11,
+        nome: 'CHEDDAR',
+        vaslor: 2.00
+    },
+    {
+        id: 12,
+        nome: 'ABACAXI',
+        vaslor: 2.00
+    },
+    {
+        id: 13,
+        nome: 'QUEIJO COALHO',
+        vaslor: 5.00
+    },
+    {
+        id: 14,
+        nome: 'SALADA - alface e tomates',
+        vaslor: 1.00
+    }
+]
+
 let carrinho = [];
 
 
@@ -68,6 +106,7 @@ let quantidade = document.querySelector('.cart .qtd p');
 let renderCart = document.querySelector('.render-cart');
 let total = document.querySelector('.total');
 let confirmar = document.querySelector('.enviar');
+let acom = document.querySelector('.area-acom');
 
 
 //chat
@@ -111,6 +150,13 @@ const adicionarCarrinho = (index) => {
 
 }
 
+const adicionarAcompanhamento = (index) => {
+    const item = acompanhamentos[index];
+    carrinho.push(item)
+    atualizarQtd()
+
+}
+
 
 const RenderCardapio = () => {
     areaRender.innerHTML = ''
@@ -124,6 +170,13 @@ const RenderCardapio = () => {
     </div>`;
     });
 
+    acompanhamentos.forEach((item, index) => {
+        acom.innerHTML += `<div class="item acom">
+        <p class="produto-titulo">${item.nome}</p>
+        <p class='preco'>R$${item.vaslor.toFixed(2)}</p>
+        <img class='add' onclick="adicionarAcompanhamento(${index})" src='https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_1280.png'/>
+    </div>`;
+    });
 
 }
 const atualizarQtd = () => {
@@ -173,13 +226,12 @@ const renderItens = () => {
     carrinho.forEach((item, index) => {
         renderCart.innerHTML += `
         <div class="cart-item">
-                    <img src="${item.img}" alt="foto">
-                    <p>${item.nome}</p>
-                    <div><p>R$${item.vaslor}</p></div>
-                    <div class="apagar" onclick="apagarItem(${index})">Remover</div>
-                    </div>
-                </div>
-        `
+            ${item.img ? `<img src="${item.img}" alt="foto">` : '<p>(ADICIONAL)</p>'}
+            <p>${item.nome}</p>
+            <div><p>R$${item.vaslor}</p></div>
+            <div class="apagar" onclick="apagarItem(${index})">Remover</div>
+        </div>
+        `;
     })
 }
 

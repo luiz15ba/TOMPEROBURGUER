@@ -1,4 +1,4 @@
-let cardapio = [
+    let cardapio = [
     {
         id: 1,
         nome: 'TÔMPERO CLÁSSICO ',
@@ -33,13 +33,6 @@ let cardapio = [
         descricao: 'Brioche leve, selado na manteiga, blend de 160g, queijo mussarela, queijo coalho banhado no mel, banana da terra frita, bacon crocante e um toque da maionese da casa.',
         vaslor: 38.00,
         img: './assets/imgs/casadinho.png'
-    },
-    {
-        id: 6,
-        nome: 'REFRIGERANTE GARRAFINHA',
-        descricao: 'Guaraná Garrafinha 200ml',
-        vaslor: 3.00,
-        img: 'https://paulistaoatacadista.vtexassets.com/arquivos/ids/384405/RefrigeranteAntarctica200mlPetGua1.jpg?v=638532944722900000'
     },
     {
         id: 7,
@@ -166,7 +159,7 @@ const RenderCardapio = () => {
         <p class="produto-titulo">${item.nome}</p>
         <p class='desc'>${item.descricao}</p>
         <p class='preco'>R$${item.vaslor.toFixed(2)}</p>
-        <img class='add' onclick="adicionarCarrinho(${index})" src='https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_1280.png'/>
+        <img class='add' onclick="adicionarCarrinho(${index})" src='/assets/imgs/btn.png'/>
     </div>`;
     });
 
@@ -174,7 +167,7 @@ const RenderCardapio = () => {
         acom.innerHTML += `<div class="item acom">
         <p class="produto-titulo">${item.nome}</p>
         <p class='preco'>R$${item.vaslor.toFixed(2)}</p>
-        <img class='add' onclick="adicionarAcompanhamento(${index})" src='https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_1280.png'/>
+        <img class='add' onclick="adicionarAcompanhamento(${index})" src='/assets/imgs/btn.png'/>
     </div>`;
     });
 
